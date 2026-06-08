@@ -1,6 +1,6 @@
 //non primitive data type
 
-// int     let age=39
+// int     let age=39(or number in js decimal and integer bith are same )
 // bigint
 // string =>  let name="harsh"
 // boolean => true/false
