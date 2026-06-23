@@ -52,3 +52,83 @@ student.greeting2 =function(){
 
 console.log(student.greeting());
 console.log(student.greeting2());
+
+
+
+//constructor
+
+const user = Object();
+
+user.name="harsh";
+user.Id="harsh23"
+console.log(user);//{ name: 'harsh', Id: 'harsh23' }
+
+const costumer = {
+    fullname:{
+        username:{
+            firstname:"Harsh",
+             lastname:"Devera"
+        }
+    }
+}
+
+console.log(costumer.fullname);//{ username: { firstname: 'Harsh', lastname: 'Devera' } }
+console.log(costumer.fullname.username.firstname);//Harsh
+console.log(costumer.fullname.username.lastname);//Devera
+
+
+const obj1 = {1:"A",2:"B"}
+const obj2 = {3:"A",4:"B"}
+const obj3 = {5:"A",6:"B"}
+
+//const obj4 ={obj1,obj2,obj3}
+//console.log(obj4);        //{obj1: { '1': 'A', '2': 'B' },obj2: { '1': 'A', '2': 'B' },obj3: { '1': 'A', '2': 'B' }}
+
+const obj4 = Object.assign({},obj1,obj2,obj3);
+console.log(obj4);          //{ '1': 'A', '2': 'B', '3': 'A', '4': 'B', '5': 'A', '6': 'B' }
+
+const obj5 = {...obj1,...obj2,...obj3} //spread operator
+console.log(obj5);      //{ '1': 'A', '2': 'B', '3': 'A', '4': 'B', '5': 'A', '6': 'B' }
+
+
+
+console.log(Object.keys(user)); //[ 'name', 'Id' ]
+console.log(Object.values(user)); //[ 'harsh', 'harsh23' ]
+console.log(Object.entries(user)); //[ [ 'name', 'harsh' ], [ 'Id', 'harsh23' ] ]
+console.log(user.hasOwnProperty("name"));//true
+
+
+const job =[
+    {
+        jobname:"worker",
+        jobid:1236
+    },
+    {
+        jobname:"worker",
+        jobid:1236
+    },
+    {
+        jobname:"worker",
+        jobid:1236
+    }   
+]  //it's used in database etc
+job[1].jobid;
+
+
+
+
+
+//destructure
+
+let Bank ={
+    bankname:"SBI",
+    bankID:"fsbvbjk2456efsremtn",
+    bankbranch:"delhi-main branch"
+}
+
+console.log(Bank.bankID); // normal way
+
+const {bankname : name} = Bank
+console.log(name); //SBI
+const {bankID}= Bank;
+console.log(bankID);  //fsbvbjk2456efsremtn
