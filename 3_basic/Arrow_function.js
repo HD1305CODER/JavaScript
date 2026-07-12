@@ -55,11 +55,14 @@ const chai =  () => {
 //     return num1 + num2;
 // }
 
+//if scope {} is open then we have to use return keyword
+//in this there is no need to use return keyword
+
 // const addTwo = (num1, num2) =>  num1 + num2;
 
-// const addTwo = (num1, num2) => ( num1 + num2 );
+// const addTwo = (num1, num2) => ( num1 + num2 );  
 
-const addTwo = (num1, num2) => ({username: "harsh"});
+//const addTwo = (num1, num2) => ({username: "harsh"});   in this scope is inside the () so need of return 
 
 
 console.log(addTwo(3, 4));
