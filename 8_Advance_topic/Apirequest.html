@@ -1,0 +1,51 @@
+<!-- Value	State	                  Description -->
+<!-- 0	    UNSENT	             Client has been created. open() not called yet. -->
+<!-- 1	    OPENED	             open() has been called. -->
+<!-- 2	    HEADERS_RECEIVED	 send() has been called, and headers and status are available. -->
+<!-- 3	    LOADING	Downloading; responseText holds partial data. -->
+<!-- 4	    DONE	             The operation is complete. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <!-- Value	State	                  Description -->
+    <!-- 0	    UNSENT	             Client has been created. open() not called yet. -->
+    <!-- 1	    OPENED	             open() has been called. -->
+    <!-- 2	    HEADERS_RECEIVED	 send() has been called, and headers and status are available. -->
+    <!-- 3	    LOADING	Downloading; responseText holds partial data. -->
+    <!-- 4	    DONE	             The operation is complete. -->
+
+
+    <script>
+
+        //XMLHttpRequest (XHR):
+// Ek network tool / browser API hai jo server ko HTTP request bhejta hai. Yeh purana tarika 
+// hai jo Events aur Callbacks (onreadystatechange, onload) par kaam karta hai.
+
+// XMLHttpRequest (XHR) objects are used to interact with servers. You can retrieve data from a
+//  URL without having to do a full page refresh.
+//  This enables a Web page to update just part of a page without disrupting what the user is doing.
+
+    const requestUrl = 'https://api.github.com/users/HD1305CODER'
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl );
+    xhr.onreadystatechange = function (){
+        console.log(xhr.readyState);
+        if(xhr.readyState == 4){
+            const data = JSON.parse(this.responseText)
+            console.log(typeof(data));
+            console.log(data )
+        }
+    }
+    xhr.send();
+    </script>
+</body>
+</html>

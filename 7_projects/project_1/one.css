@@ -1,0 +1,56 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.nav-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 47%;
+    border: 2px solid rgb(17, 16, 16);
+    margin-top: 15px;
+    height: 30px;
+    width: 50px;
+}
+
+a{
+    height: 30px;
+    width: 50px;
+    background-color:rgb(178, 161, 161)
+}
+a:hover{
+    color: brown;
+    font-size: 20px;
+}
+
+.canvas{
+    text-align: center;
+    margin: 10px auto 10px;
+    margin: 15px;
+}
+.button{
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    border: 2px solid black;
+    display:inline-block;
+}
+#blue{
+    background-color: blue;
+}
+#grey{
+    background-color: grey;
+}
+#yellow{
+    background-color: yellow;
+}
+#red{
+    background-color: red;
+}
+
+.rule{
+    text-align: center;
+    font-size: large;
+    font-size: 25px;
+}
