@@ -1,5 +1,5 @@
 const user = {
-    username: "hitesh",
+    username: "harsh",
     loginCount: 8,
     signedIn: true,
 
@@ -31,7 +31,7 @@ function User(username, loginCount, isLoggedIn){
     return this
 }
 //new keyword is used to create an instance means it create an copy the object or function so that the original code is not get overwrite otherwise if we dont use new keyword that the values will overwrite
-const userOne = new User("hitesh", 12, true)
-const userTwo = new User("ChaiAurCode", 11, false)
+const userOne = new User("harsh", 12, true)
+const userTwo = new User("devera", 11, false)
 console.log(userOne.constructor); //constructor function will give the reference of itself 
 //console.log(userTwo);
