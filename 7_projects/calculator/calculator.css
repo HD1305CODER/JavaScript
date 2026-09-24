@@ -1,0 +1,35 @@
+    *{
+        margin: 0%;
+        padding: 0%;
+        background-color: black;
+        color: white;
+    }
+    body{
+        display: grid;
+        place-items: center;
+        height: 100vh;
+
+    }
+    #display{
+        height: 100px;
+        width: 100%;
+        background-color: gray;
+        font-size: 40px;
+        display:flex;
+        justify-content:end;
+        align-items: end;
+    }
+    button{
+        height: 50px;
+        width: 50px;
+        margin: 15px;
+        border-radius: 20%;
+        font-size:25px;
+    }
+
+    .control-button{
+        color: rgb(255, 166, 0);
+    }   
+    .operator{
+        color: rgb(255, 166, 0);
+    }
